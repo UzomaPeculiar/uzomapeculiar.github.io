@@ -1,0 +1,75 @@
+import random as rand
+
+man = 5
+while man > 0:
+# Player's code
+    your_choice = input('Rock, Paper or Scissors: ')
+
+
+# Computer's Code
+    comp_choice = rand.randrange(0,3)
+    if comp_choice == 0:
+        comp_choice = 'Rock'
+    elif comp_choice == 1:
+        comp_choice = 'Paper'
+    else:
+        comp_choice = 'Scissors'
+    print('Computer chose',comp_choice)
+
+
+# Draws
+    if your_choice == 'Rock' and comp_choice == 'Rock':
+        print('Draw, try again')
+        man -= 1
+    elif your_choice == 'Paper' and comp_choice == 'Paper':
+        print('Draw, try again')
+        man -= 1
+    elif your_choice == 'Scissors' and comp_choice == 'Scissors':
+        print('Draw, try again')
+        man -= 1
+
+# Player wins
+    #elif your_choice == 'Scissors' and comp_choice == 'Paper':
+    #    print('You win!')
+    #    break
+    #elif your_choice == 'Rock' and comp_choice == 'Scissors':
+    #    print('You win!')
+    #    break
+    #elif your_choice == 'Paper' and comp_choice == 'Rock':
+    #    print('You win!')
+    #    break
+
+# Computer wins
+    #elif your_choice == 'Rock' and comp_choice == 'Paper':
+    #    print('Computer wins!')
+
+    #elif your_choice == 'Paper' and comp_choice == 'Scissors':
+    #    print('Computer wins!')
+
+    #elif your_choice == 'Scissors' and comp_choice == 'Rock':
+    #    print('Computer wins!')
+
+
+
+
+
+
+
+
+    elif (your_choice or comp_choice == 'Scissors') and (comp_choice or your_choice == 'Paper'):
+            if comp_choice == 'Scissors':
+                print('Computer win!')
+            else:
+                 print('You win!')
+            
+    elif (your_choice or comp_choice == 'Scissors') and (comp_choice or your_choice == 'Rock'):
+            if comp_choice == 'Rock':
+                print('Computer win!')
+            else:
+                 print('You win!')
+
+    elif (your_choice or comp_choice == 'Rock') and (comp_choice or your_choice == 'Paper'):
+            if comp_choice == 'Paper':
+                print('Computer win!')
+            else:
+                 print('You win!')
