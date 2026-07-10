@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Projects — Peculiar Uzoma</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Data analysis projects in Python, SQL, Power BI, Excel, and Tableau by Peculiar Uzoma." />
+	<link rel="stylesheet" href="assets/css/site.css" />
+	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QE772HBETN"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-QE772HBETN');
+</script>
+<body>
+
+	<header class="site-header" data-site-header></header>
+
+	<main>
+		<div class="page-hero">
+			<p class="section-label">Portfolio</p>
+			<h1>All projects</h1>
+			<p>End-to-end data analysis work across Python, SQL, Power BI, Excel, and Tableau — each with a clear business outcome.</p>
+			<p class="page-meta" id="project-count"></p>
+		</div>
+
+		<section class="page-section" style="padding-top: 0;">
+			<div class="filter-bar" id="project-filters"></div>
+			<div class="projects-grid" id="projects-grid"></div>
+		</section>
+
+		<div class="cta-band">
+			<div class="cta-inner">
+				<div>
+					<h2>Like what you see?</h2>
+					<p>Connect on LinkedIn or download my resume to learn more about my background.</p>
+				</div>
+				<div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+					<a href="Certificates/Uzoma Peculiar's Resume.pdf" download class="btn btn-primary">Download resume</a>
+					<a href="https://www.linkedin.com/in/peculiar-uzoma-5a9116235" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="site-footer" data-site-footer></footer>
+
+	<script src="assets/js/data.js"></script>
+	<script src="assets/js/site.js"></script>
+	<script>
+		const params = new URLSearchParams(window.location.search);
+		initProjectsPage(params.get('tool') || 'all');
+	</script>
+</body>
+</html>
